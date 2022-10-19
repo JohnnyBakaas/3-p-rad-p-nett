@@ -9,11 +9,11 @@ let idForSquare = ['0-0', '0-1', '0-2', '1-0', '1-1', '1-2', '2-0', '2-1', '2-2'
 const go = (place) => {
     if (boardState[place] && !doWeHaveAWinner()){
         boardState[place] = false;
-        document.getElementById(idForSquare[place]).innerHTML = `<div style="color: white">${curentPlayer}</div>`;
+        document.getElementById(idForSquare[place]).innerHTML = `<div class="spilleBrikke">${curentPlayer}</div>`;
         boardStateOwnd[place] = curentPlayer;
         
         if (doWeHaveAWinner()) {
-            document.getElementById('gmae-info').innerHTML = `<div>Spiller ${curentPlayer} er vinneren &#127881;</div>`;
+            document.getElementById('gmae-info').innerHTML = `<div class="vinnerTekst">Spiller ${curentPlayer} er vinneren &#127881;</div>`;
         } else {
             nexstPlayer()
             document.getElementById('gmae-info').innerHTML = `<div>Det er spiller  ${curentPlayer}  sin tur :)</div>`;

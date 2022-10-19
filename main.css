@@ -1,10 +1,11 @@
 * {
     margin: 0;
     padding: 0;
+    background-color: rgb(10, 10, 10);
 }
 
 .spilleFelt {
-    background-color: black;
+    background-color: rgb(94, 2, 2);
     height: 100px;
     width: 100px;
 }
@@ -16,3 +17,29 @@
     grid-template-columns: 100px 100px 100px;
 }
 
+.spilleBrikke {
+    background-color: rgb(94, 2, 2);
+    color: white;
+    font-size: 85px;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    color: rgb(131, 0, 0);
+    font-size: 75px;
+}
+
+.undertekst {
+    color: rgb(131, 0, 0);
+    margin-bottom: 10px;
+}
+
+.vinnerTekst {
+    font-size: 100px;
+}
+
+.sentrerGreier {
+    display: flex;
+    justify-content: center;
+}
