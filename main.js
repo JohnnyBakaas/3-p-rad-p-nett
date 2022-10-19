@@ -3,7 +3,7 @@
 let curentPlayer = "X"
 
 let boardState = new Array(9).fill(true)
-let boardStateOwnd = new Array(9)
+let boardStateOwnd = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 let idForSquare = ['0-0', '0-1', '0-2', '1-0', '1-1', '1-2', '2-0', '2-1', '2-2']
 
 const go = (place) => {
@@ -42,14 +42,14 @@ const nexstPlayer = () => {
 }
 
 const doWeHaveAWinner = () => {
-    if (boardStateOwnd[0] == boardStateOwnd[1] && boardStateOwnd[2]) {return true}
-    if (boardStateOwnd[3] == boardStateOwnd[4] && boardStateOwnd[5]) {return true}
-    if (boardStateOwnd[6] == boardStateOwnd[7] && boardStateOwnd[8]) {return true}
+    if (boardStateOwnd[0] == boardStateOwnd[1] && boardStateOwnd[2] == boardStateOwnd[1]) {return true}
+    if (boardStateOwnd[3] == boardStateOwnd[4] && boardStateOwnd[5] == boardStateOwnd[4]) {return true}
+    if (boardStateOwnd[6] == boardStateOwnd[7] && boardStateOwnd[8] == boardStateOwnd[7]) {return true}
 
-    if (boardStateOwnd[0] == boardStateOwnd[3] && boardStateOwnd[6]) {return true}
-    if (boardStateOwnd[1] == boardStateOwnd[4] && boardStateOwnd[7]) {return true}
-    if (boardStateOwnd[2] == boardStateOwnd[5] && boardStateOwnd[8]) {return true}
+    if (boardStateOwnd[0] == boardStateOwnd[3] && boardStateOwnd[6] == boardStateOwnd[3]) {return true}
+    if (boardStateOwnd[1] == boardStateOwnd[4] && boardStateOwnd[7] == boardStateOwnd[4]) {return true}
+    if (boardStateOwnd[2] == boardStateOwnd[5] && boardStateOwnd[8] == boardStateOwnd[5]) {return true}
 
-    if (boardStateOwnd[0] == boardStateOwnd[4] && boardStateOwnd[8]) {return true}
-    if (boardStateOwnd[2] == boardStateOwnd[4] && boardStateOwnd[6]) {return true}
+    if (boardStateOwnd[0] == boardStateOwnd[4] && boardStateOwnd[8] == boardStateOwnd[4]) {return true}
+    if (boardStateOwnd[2] == boardStateOwnd[4] && boardStateOwnd[6] == boardStateOwnd[4]) {return true}
 }
